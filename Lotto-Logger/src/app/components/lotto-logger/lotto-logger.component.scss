@@ -1,0 +1,57 @@
+h1{
+ text-align: center;
+ padding: 1%;
+}
+
+.container{
+  text-align: center;
+  display: flex; /* Use flexbox to center horizontally and vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 10vh;
+  padding: 3px;
+
+}
+
+.table-container{
+  text-align: center;
+}
+
+.table-head{
+  text-align: center;
+}
+#t-cell{
+
+  text-align: center;
+  padding-left: 100px;
+}
+.btn{
+  text-align: center;
+  padding: 7px;
+
+}
+.row-1{
+
+  text-align: center;
+  background-color: rgb(28, 28, 28);
+}
+
+.r-cell{
+position: flex;
+  text-align: center;
+  margin-left: 110%;
+  justify-content: center;
+}
+.power{
+  align-items:center;
+  margin-left: 30%;
+  padding: 6px;
+  font-size: xx-large;
+}
+
+.mega{
+  align-items:center;
+  margin-left: 30%;
+  padding: 6px;
+  font-size: xx-large;
+}
