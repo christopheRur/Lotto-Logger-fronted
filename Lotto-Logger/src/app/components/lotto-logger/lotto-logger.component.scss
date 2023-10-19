@@ -10,6 +10,18 @@ h1{
   align-items: center; /* Center vertically */
   height: 10vh;
   padding: 3px;
+  grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+
+
+}
+table{
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.table-container tr {
+  margin-bottom: 10px; /* You can adjust the value as needed for spacing */
 
 }
 
@@ -41,6 +53,8 @@ position: flex;
   text-align: center;
   margin-left: 110%;
   justify-content: center;
+  border: none;
+  border-radius: 5px;
 }
 .power{
   align-items:center;
@@ -54,4 +68,124 @@ position: flex;
   margin-left: 30%;
   padding: 6px;
   font-size: xx-large;
+}
+
+.terminal-container{
+position: flex;
+background-color: azure;
+border-top:rgb(13, 0, 255) solid;
+border-bottom: yellow solid;
+border-left:green solid;
+border-left:green solid;border-right:green solid;
+padding: 5px;
+color: black;
+border: none;
+border-radius: 5px;
+grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+max-width: 100%;
+overflow: hidden;
+}
+
+#cell1{
+
+text-align: center;
+}
+.inner-col1{
+  margin-left: auto;
+  text-align: center;
+  color: rgb(236, 236, 244);
+  position: flex;
+  //margin-right:-212%;
+  text-align: center ;
+  width: 303px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(2, 3, 2);
+}
+.inner-col1:hover {
+  box-shadow: 0 8px 16px rgba(241, 25, 245, 0.4);
+}
+
+#cell2{
+  text-align: center;
+}
+.inner-col2{
+  text-align: center;
+  color:white;
+  position: flex;
+  margin-right:-212%;
+  text-align: center ;
+  width: 505px;
+  float: left;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(3, 23, 23);
+
+}
+.inner-col2:hover {
+  box-shadow: 0 8px 16px rgba(5, 1, 248, 0.4); /* Bigger white shadow on hover */
+}
+
+#cell3{
+  text-align: right;
+
+
+}
+.inner-col3{
+  position: flex;
+  margin-right:-212%;
+  text-align: center ;
+  width: 505px;
+  background-color: rgb(0, 12, 12);
+  color: rgb(247, 128, 128);
+  float: left;
+  border: none;
+  border-radius: 3px;
+}
+.inner-col3:hover {
+  box-shadow: 0 8px 16px rgba(243, 6, 6, 0.4);
+}
+
+.inner-col1,
+  .inner-col2,
+  .inner-col3 {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  pre {
+    margin: 0;
+  }
+  .terminal-container table {
+    width: 100%;
+  }
+
+  .terminal-container td {
+    text-align: center;
+  }
+.btn{
+  background-color: #0e6ee4; /* Background color */
+  color: #fff; /* Text color */
+  padding: 15px 30px; /* Padding for the button */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* White shadow */
+  transition: 0.3s; /* Transition effect on hover */
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Bigger white shadow on hover */
+}
+
+.btn-p{
+  background-color: #e44c2d; /* Background color */
+  color: #fff; /* Text color */
+  padding: 15px 30px; /* Padding for the button */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* White shadow */
+  transition: 0.3s; /* Transition effect on hover */
+  cursor: pointer;
+}
+.btn-p:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Bigger white shadow on hover */
 }
