@@ -36,7 +36,9 @@ table{
 
   text-align: center;
   padding-left: 100px;
+
 }
+
 .btn{
   text-align: center;
   padding: 7px;
@@ -55,6 +57,10 @@ position: flex;
   justify-content: center;
   border: none;
   border-radius: 5px;
+}
+.r-cell:hover {
+  box-shadow: 0 16px 16px 8px rgba(167, 29, 240, 0.4);
+  color: rgba(6, 255, 234, 0.4) ;
 }
 .power{
   align-items:center;
@@ -173,7 +179,8 @@ text-align: center;
   cursor: pointer;
 }
 .btn:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Bigger white shadow on hover */
+  color: rgb(255, 240, 27);
+  box-shadow: 0 8px 16px 8px#0e6ee4;; /* Bigger white shadow on hover */
 }
 
 .btn-p{
@@ -187,5 +194,6 @@ text-align: center;
   cursor: pointer;
 }
 .btn-p:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Bigger white shadow on hover */
+  color: black;
+  box-shadow: 0 16px 16px 8px rgba(253, 2, 2, 0.4);
 }
