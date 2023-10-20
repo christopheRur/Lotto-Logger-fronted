@@ -12,4 +12,6 @@ export class LottoLoggerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
