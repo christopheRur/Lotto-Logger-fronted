@@ -64,16 +64,21 @@ position: flex;
 }
 .power{
   align-items:center;
-  margin-left: 30%;
-  padding: 6px;
+  margin-right: 60%;
+  padding: 2px;
   font-size: xx-large;
+width: 210px;
+background-color: rgba(255, 0, 0, 0.093);
 }
 
 .mega{
   align-items:center;
-  margin-left: 30%;
-  padding: 6px;
-  font-size: xx-large;
+  margin-right: 60%;
+  padding: 2px;
+  font-size: 30px;
+
+width: 230px;
+background-color: rgba(30, 0, 255, 0.093);
 }
 
 .terminal-container{
