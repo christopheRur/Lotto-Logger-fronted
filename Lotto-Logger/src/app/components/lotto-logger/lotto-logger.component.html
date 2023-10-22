@@ -10,7 +10,8 @@
       </td>
       <td id="t-cell">
         <Button class="btn-p" (click)="getPowerBalls()">
-          Generate Power-B</Button>
+          Generate Power-B</Button
+        >
       </td>
     </thead>
     <pre></pre>
@@ -18,18 +19,13 @@
       <td class="r-cell">
         Mega
         <div class="mega">
-          {{ megaBalls === undefined ? "Mega-Ball" : megaBalls.join("*") + "*"
-          }}<span style="color: gold; font-weight: bold">{{ goldBall }}</span>
+          {{ megaBalls === undefined ? "Mega-Ball" : megaBalls.join("*") }}
         </div>
       </td>
       <td class="r-cell">
         Power
         <div class="power">
-          {{
-          powerBalls === undefined
-          ? "Power-Ball"
-          : powerBalls.join("*") + "*"
-          }}<span style="color: red; font-weight: bold">{{ redBall }}</span>
+          {{ powerBalls === undefined ? "Power-Ball" : powerBalls.join("*") }}
         </div>
       </td>
     </tr>
@@ -43,17 +39,19 @@
 <div class="terminal-container">
   <table>
     <tr>
-      <td id="cell1">
-        <div class="inner-col1">
-          <h1>All Sequence</h1>
-          {{lottoPly}}
-        </div>
-      </td>
+
       <td id="cell2">
         <div class="inner-col2">
           <h1>MegaBall</h1>
-{{lottoPly}}
+          <span *ngFor="let sequence of megaBallSequences">
+            {{ sequence?.join("    -    ") + "          }->   " }} <br />
+          </span>
           <pre></pre>
+        </div>
+        <div class="golden">
+          <h1 style="text-align: center; padding: 1%">G</h1>
+
+          <span *ngFor="let gold of goldMegaBalls"> {{ gold }} <br /> </span>
         </div>
       </td>
 
@@ -61,8 +59,14 @@
         <div class="inner-col3">
           <h1>PowerBall</h1>
           <span *ngFor="let sequence of powerBallSequences">
-            {{ sequence?.reverse()?.join('       -       ')}} <br>
+            {{ sequence?.join("    -    ") + "          }->   "}} <br />
           </span>
+
+        </div>
+        <div class="redball">
+          <h1 style="text-align: center; padding: 1%">R</h1>
+
+          <span *ngFor="let red of redBallS"> {{ red }} <br /> </span>
         </div>
       </td>
     </tr>

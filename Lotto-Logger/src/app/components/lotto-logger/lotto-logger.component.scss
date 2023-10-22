@@ -108,7 +108,7 @@ text-align: center;
   position: flex;
   //margin-right:-212%;
   text-align: center ;
-  width: 303px;
+  width: 203px;
   border: none;
   border-radius: 3px;
   background-color: rgb(2, 3, 2);
@@ -122,15 +122,16 @@ text-align: center;
 }
 .inner-col2{
   text-align: center;
-  color:white;
+  color:rgb(171, 171, 255);
   position: flex;
   margin-right:-212%;
   text-align: center ;
-  width: 505px;
+  width: 405px;
   float: left;
   border: none;
   border-radius: 3px;
   background-color: rgb(3, 23, 23);
+  font-size: larger;
 
 }
 .inner-col2:hover {
@@ -152,6 +153,7 @@ text-align: center;
   float: left;
   border: none;
   border-radius: 3px;
+  font-size: larger;
 }
 .inner-col3:hover {
   box-shadow: 0 8px 16px rgba(243, 6, 6, 0.4);
@@ -185,7 +187,7 @@ text-align: center;
 }
 .btn:hover {
   color: rgb(255, 240, 27);
-  box-shadow: 0 8px 16px 8px#0e6ee4;; /* Bigger white shadow on hover */
+  box-shadow: 0 8px 16px 8px#0e6ee4; /* Bigger white shadow on hover */
 }
 
 .btn-p{
@@ -201,4 +203,50 @@ text-align: center;
 .btn-p:hover {
   color: black;
   box-shadow: 0 16px 16px 8px rgba(253, 2, 2, 0.4);
+}
+
+.golden{
+  text-align: center;
+  background-color: rgb(21, 21, 22);
+  // width: 52px;
+  // height: 222px;
+  margin-left:430px;
+  padding: 3px;
+  font-size: larger;
+  color: gold;
+
+
+}
+
+.golden:hover{
+  background-color:black;
+  color: gold;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 12px 12px 12px rgba(251, 231, 4, 0.2); /* White shadow */
+  transition: 0.7s; /* Transition effect on hover */
+  cursor: pointer;
+}
+
+.redball{
+  text-align: center;
+  background-color: rgb(21, 21, 22);
+  // width: 52px;
+  // height: 222px;
+  margin-left:530px;
+  padding: 3px;
+  font-size: larger;
+  color: red;
+
+
+}
+
+.redball:hover{
+  background-color:black;
+  color: rgb(255, 15, 47);
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 12px 12px 12px rgba(251, 231, 4, 0.2); /* White shadow */
+  transition: 0.7s; /* Transition effect on hover */
+  cursor: pointer;
 }

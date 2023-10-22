@@ -26,13 +26,13 @@ export class LottoLoggerComponent implements OnInit {
   gameName!:string;
   size!:number;
  isComplete!:boolean;
- goldMegaBall!:number;
-megaBallSequence!:number[];
- redPowerBall!:number;
- powerBallSequence?:number[];
+
+
 
  public powerBallSequences: (number[] | null)[] = [];
  public redBallS: (number[] | null)[] = [];
+ public megaBallSequences: (number[] | null)[] = [];
+ public goldMegaBalls: (number[] | null)[] = [];
 
 /**
  *get powerball number from service
@@ -42,6 +42,7 @@ public getPowerBalls(){
   this.lottoService.retrievePowerBalls().subscribe((response:number[])=>{
 this.powerBalls=response;
 this.getredBall();
+this.getPowerPlaysBalls();
 
 console.log(response);
   })
@@ -54,6 +55,7 @@ public getMegaBalls(){
   this.lottoService.retrieveMegaBalls().subscribe((response:number[])=>{
 this.megaBalls=response;
 this.getGoldBall();
+this.getMegaPlaysBalls();
 
 console.log(response);
   })
@@ -76,27 +78,48 @@ console.log("==>"+response);
  */
  public getredBall(){
 
-  this.lottoService.retrieveRedPowerBall().subscribe((response:number)=>{
+this.lottoService.retrieveRedPowerBall().subscribe((response:number)=>{
 this.redBall=response;
 
-this.getPowerPlaysBalls();
   })
 }
 
 /**
  *gets powerPlay list from service
  */
+
 public getPowerPlaysBalls() {
   this.lottoService.retrievePowerPlaysBall().subscribe((response: LottoPlay[]) => {
     this.lottoPly = response;
 
     // Clear the array in case this method is called multiple times
     this.powerBallSequences = [];
-    this.redBallS=[]
+    this.redBallS=[];
 
     for (const lotto of this.lottoPly) {
       this.powerBallSequences.push(lotto.powerBallSequence);
       this.redBallS.push(lotto.redPowerBall);
+      console.log(response);
+    }
+  });
+}
+
+/**
+ *gets powerPlay list from service
+ */
+ public getMegaPlaysBalls() {
+  this.lottoService.retrieveMegaPlaysBall().subscribe((response: LottoPlay[]) => {
+    this.lottoPly = response;
+
+    // Clear the array in case this method is called multiple times
+    this.megaBallSequences=[];
+    this.goldMegaBalls=[];
+
+    for (const lotto of this.lottoPly) {
+
+      this.megaBallSequences.push(lotto.megaBallSequence)
+      this.goldMegaBalls.push(lotto.goldMegaBall);
+      console.log(response);
     }
   });
 }

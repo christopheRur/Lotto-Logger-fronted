@@ -4,7 +4,7 @@ export interface LottoPlay{
   gameName: string;
   size: number;
   isComplete: boolean;
-  goldMegaBall: number;
+  goldMegaBall: number[];
   megaBallSequence: number[];
   redPowerBall: number[] | null;
   powerBallSequence: number[] | null;
