@@ -33,6 +33,7 @@ export class LottoLoggerComponent implements OnInit {
  public redBallS: (number[] | null)[] = [];
  public megaBallSequences: (number[] | null)[] = [];
  public goldMegaBalls: (number[] | null)[] = [];
+ public isCompleteSeq: (boolean[] | null)[] = [];
 
 /**
  *get powerball number from service
@@ -95,10 +96,12 @@ public getPowerPlaysBalls() {
     // Clear the array in case this method is called multiple times
     this.powerBallSequences = [];
     this.redBallS=[];
+    this.isCompleteSeq=[]
 
     for (const lotto of this.lottoPly) {
       this.powerBallSequences.push(lotto.powerBallSequence);
       this.redBallS.push(lotto.redPowerBall);
+      this.isCompleteSeq.push(lotto.isComplete)
       console.log(response);
     }
   });
